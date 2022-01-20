@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .select__btn {
+            border: none;
+            background-color: lightcoral;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .list {
+            padding: 0;
+        }
+
+        .option {
+            background-color: beige;
+            padding: 10px;
+        }
+
+        .option:checked {
+            background-color: aquamarine;
+            padding: 10px;
+        }
+
+        .option:hover {
+            background-color: darkkhaki;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <selectmenu id="country">
+            <div slot="button" behavior="button">
+                <button class="select__btn"  behavior="selected-value"></button>
+            </div>
+            <popup class="list" slot="listbox" behavior="listbox">
+                <option class="option" value="cnt2" selected>Country 1</option>
+                <option class="option" value="cnt2">Country 2</option>
+                <option class="option" value="cnt3">Country 3</option>
+            </popup>
+        </selectmenu>
+    </div>
+</body>
+</html>
